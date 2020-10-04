@@ -8,7 +8,7 @@ using AOIS1.Core.Domain.Models.Characteristics;
 
 namespace GameStore.Data.Extensions
 {
-    public static class RepositoryDIResolver
+    public static class RepositoryDependencyResolver
     {
         public static void AddUOW(this IServiceCollection services)
         {

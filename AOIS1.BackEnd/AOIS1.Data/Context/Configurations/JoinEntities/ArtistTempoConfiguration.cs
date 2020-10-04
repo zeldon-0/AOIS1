@@ -24,7 +24,7 @@ namespace AOIS1.Data.Context.Configurations.JoinEntities
                 .HasForeignKey(ag => ag.TempoId);
 
             builder.Property(a => a.Probability)
-                .HasColumnType("decimal(1,2)");
+                .HasColumnType("decimal(3,2)");
         }
     }
 }

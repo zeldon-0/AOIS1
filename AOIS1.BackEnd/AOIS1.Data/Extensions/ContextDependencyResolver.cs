@@ -9,7 +9,7 @@ using AOIS1.Data.Context;
 
 namespace AOIS1.Data.Extensions
 {
-    public static class ContextDIResolver
+    public static class ContextDependencyResolver
     {
         public static void AddContext(this IServiceCollection services, IConfiguration configuration)
         {

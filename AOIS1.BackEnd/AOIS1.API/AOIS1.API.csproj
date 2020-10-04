@@ -1,8 +1,21 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.8">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AOIS1.API.Contracts\AOIS1.API.Contracts.csproj" />
+    <ProjectReference Include="..\AOIS1.Core\AOIS1.Core.csproj" />
+    <ProjectReference Include="..\AOIS1.Data\AOIS1.Data.csproj" />
+  </ItemGroup>
 
 
 </Project>

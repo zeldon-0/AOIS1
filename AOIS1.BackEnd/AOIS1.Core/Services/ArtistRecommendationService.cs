@@ -16,13 +16,13 @@ namespace AOIS1.Core.Services
     public class ArtistRecommendationService : IArtistRecommendationService
     {
         private IUnitOfWork _unitOfWork;
-        private Mapper _mapper;
+        private IMapper _mapper;
 
         public ArtistRecommendationService(IUnitOfWork unitOfWork,
-            Mapper mapper)
+            IMapper mapper)
         {
             _unitOfWork = unitOfWork ?? throw new ArgumentNullException($"No instance of {nameof(IUnitOfWork)} provided.");
-            _mapper = mapper ?? throw new ArgumentNullException($"No instance of {nameof(Mapper)} provided.");
+            _mapper = mapper ?? throw new ArgumentNullException($"No instance of {nameof(IMapper)} provided.");
         }
         public async Task<ArtistResultModel> GetRecommendedArtistAsync(CharacteristicsQuery query)
         {
