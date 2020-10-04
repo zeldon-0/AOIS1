@@ -12,6 +12,7 @@ namespace AOIS1.Core.Extensions
         public static void AddServices(this IServiceCollection services)
         {
             services.AddScoped<IArtistRecommendationService, ArtistRecommendationService>();
+            services.AddScoped<IRepositoryService, RepositoryService>();
         }
     }
 }

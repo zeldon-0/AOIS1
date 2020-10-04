@@ -15,10 +15,14 @@ namespace AOIS1.API.Controllers
     public class ArtistsController : ControllerBase
     {
         private IArtistRecommendationService _artistRecommendationService;
+        private IRepositoryService _repositoryService;
 
-        public ArtistsController(IArtistRecommendationService artistRecommendationService)
+        public ArtistsController(IArtistRecommendationService artistRecommendationService,
+            IRepositoryService repositoryService)
         {
             _artistRecommendationService = artistRecommendationService ?? throw new ArgumentNullException($"No instance of {nameof(IArtistRecommendationService)} provided.");
+            _repositoryService = repositoryService ?? throw new ArgumentNullException($"No instance of {nameof(IRepositoryService)} provided.");
+
         }
 
         [HttpPost]
@@ -30,6 +34,14 @@ namespace AOIS1.API.Controllers
                 return NoContent();
 
             return Ok(artist);
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> GetAllArtists()
+        {
+            IEnumerable<ArtistListModel> artists = await _repositoryService.GetAllArtistsAsync();
+
+            return Ok(artists);
         }
     }
 }
