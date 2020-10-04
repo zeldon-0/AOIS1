@@ -8,6 +8,6 @@ namespace AOIS1.Core.Repositories.Contracts
 {
     public interface IArtistRepository : IGenericRepository<Artist>
     {
-        Task<Artist> GetAllArtistWithRelatedEntitiesAsync();
+        Task<IEnumerable<Artist>> GetAllArtistWithRelatedEntitiesAsync();
     }
 }
