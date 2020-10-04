@@ -22,4 +22,8 @@
     <ProjectReference Include="..\AOIS1.Core\AOIS1.Core.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="DB Seeding\" />
+  </ItemGroup>
+
 </Project>

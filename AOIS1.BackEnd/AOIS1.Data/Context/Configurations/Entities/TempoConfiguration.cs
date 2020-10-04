@@ -18,8 +18,7 @@ namespace AOIS1.Data.Context.Configurations.Entities
                 .IsRequired();
 
             builder.Property(a => a.ImageURL)
-                .HasMaxLength(3000)
-                .IsRequired();
+                .HasMaxLength(3000);
         }
     }
 }
