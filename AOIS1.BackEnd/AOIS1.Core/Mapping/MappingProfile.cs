@@ -22,6 +22,9 @@ namespace AOIS1.Core.Mapping
                 src => src.GetProbabilityValue()))
                 .ReverseMap();
 
+            CreateMap<Artist, ArtistListModel>()
+                .ReverseMap();
+
             CreateMap<Genre, GenreModel>()
                 .ReverseMap();
 
