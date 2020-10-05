@@ -1,0 +1,8 @@
+<div id="container">
+    <div *ngFor="let genre of genres" class ="row">
+        <mat-checkbox class = "button"></mat-checkbox>
+        <input type="radio" class = "button">
+        <p class="text">{{genre.name}}</p>
+        <img src={{genre.imageURL}} class = "image">
+    </div>
+</div>  

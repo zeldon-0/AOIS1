@@ -1,0 +1,7 @@
+<div id="container">
+    <div *ngFor="let genre of genres" class ="row">
+        <input type="checkbox" class = "button" (change) = "emit(genre)" >
+        <p class="text">{{genre.name}}</p>
+        <img src={{genre.imageURL}} class = "image">
+    </div>
+</div>  

@@ -27,6 +27,17 @@ namespace AOIS1.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors(options =>
+            {
+                options.AddPolicy("AllowMyOrigin",
+                        builder =>
+                        {
+                            builder.AllowAnyOrigin();
+                            builder.AllowAnyHeader();
+                            builder.AllowAnyMethod();
+                        });
+            });
+
             services.AddControllers();
             services.AddCore();
             services.AddData(Configuration);
@@ -43,6 +54,8 @@ namespace AOIS1.API
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            app.UseCors("AllowMyOrigin");
 
             app.UseAuthorization();
 
