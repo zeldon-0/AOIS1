@@ -1,0 +1,6 @@
+<div id = "container">
+    <button (click)="recommend()"></button>
+    <div *ngIf = "artistResult">
+        <img src = {{artistResult.imageURL}}>
+    </div>
+</div>

@@ -38,7 +38,7 @@ namespace AOIS1.API.Controllers
             return Ok(instruments);
         }
 
-        [HttpGet("tempo/[action]")]
+        [HttpGet("tempos/[action]")]
         public async Task<IActionResult> GetAllTempos()
         {
             IEnumerable<TempoModel> tempos = await _repositoryService.GetAllTemposAsync();
@@ -46,7 +46,7 @@ namespace AOIS1.API.Controllers
             return Ok(tempos);
         }
 
-        [HttpGet("novelty/[action]")]
+        [HttpGet("novelties/[action]")]
         public async Task<IActionResult> GetAllNovelties()
         {
             IEnumerable<NoveltyModel> novelties = await _repositoryService.GetAllNoveltiesAsync();

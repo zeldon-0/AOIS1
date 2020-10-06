@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import {InstrumentFetchService} from '../../services/instrument-fetch.service';
 import {Instrument} from '../../models/instrument';
 import {MatCheckboxModule} from '@angular/material/checkbox';
@@ -21,6 +21,11 @@ export class InstrumentComponent implements OnInit {
             this.instruments = instruments;
         }
       )
+  }
+  @Output() addedInstrument = new EventEmitter<Instrument>();
+
+  emit(instrument : Instrument){
+    this.addedInstrument.emit(instrument);
   }
 
 }

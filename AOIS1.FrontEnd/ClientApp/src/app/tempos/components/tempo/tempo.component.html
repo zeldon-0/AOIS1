@@ -1,0 +1,6 @@
+<div id="container">
+    <div *ngFor="let tempo of tempos" class ="row">
+        <input type="checkbox" class = "button" (change) = "emit(tempo)" >
+        <p class="text">{{tempo.name}}</p>
+    </div>
+</div>  
