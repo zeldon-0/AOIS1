@@ -1,6 +1,12 @@
 <div id = "container">
-    <button (click)="recommend()"></button>
-    <div *ngIf = "artistResult">
-        <img src = {{artistResult.imageURL}}>
+    <button  (click)="recommend()" class = "button"> Recommend</button>
+    <div class="row">
+        <div *ngIf = "artistResult">
+            <img src = {{artistResult.imageURL}} class = "image">
+        </div>
+        <div id = "wrapper">
+            <p class = "text">{{artistResult.name}}</p>
+            <p *ngIf = "artistResult.probability!=0" id = "probability">Match Probability: {{artistResult.probability * 100 | number}}%</p>
+        </div>
     </div>
 </div>

@@ -9,13 +9,17 @@ import { Novelty } from "../novelties/models/novelty";
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
+  styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
   public query : RecommendationQuery;
   constructor(){
      this.query = new RecommendationQuery();
   }
-  
+  public genresVisible : boolean = false;
+  public instrumentsVisible : boolean = false;
+  public noveltiesVisible : boolean = false;
+  public temposVisible : boolean = false;
   
   onAddedGenre(genre : Genre){
 

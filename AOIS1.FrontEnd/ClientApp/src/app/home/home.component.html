@@ -1,5 +1,9 @@
-<app-genre (addedGenre)="onAddedGenre($event)"></app-genre>
-<app-instrument (addedInstrument)="onAddedInstrument($event)"></app-instrument>
-<app-novelty (addedNovelty)="onAddedNovelty($event)"></app-novelty>
-<app-tempo (addedTempo)="onAddedTempo($event)"> </app-tempo>
+<button (click) ="genresVisible = !genresVisible" class = "button">Toggle genres</button>
+<app-genre  *ngIf="genresVisible" (addedGenre)="onAddedGenre($event)"></app-genre>
+<button (click) ="instrumentsVisible = !instrumentsVisible" class = "button">Toggle instruments</button>
+<app-instrument *ngIf="instrumentsVisible" (addedInstrument)="onAddedInstrument($event)"></app-instrument>
+<button (click) ="noveltiesVisible = !noveltiesVisible" class = "button">Toggle novelties</button>
+<app-novelty *ngIf="noveltiesVisible" (addedNovelty)="onAddedNovelty($event)"></app-novelty>
+<button (click) ="temposVisible = !temposVisible" class = "button">Toggle tempos</button>
+<app-tempo  *ngIf="temposVisible" (addedTempo)="onAddedTempo($event)"> </app-tempo>
 <app-artist-recommendation [recommendationQuery] = "query"></app-artist-recommendation>
